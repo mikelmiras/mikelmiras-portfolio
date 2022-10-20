@@ -1,0 +1,37 @@
+@media (max-width: 900px){
+    .rrss-holder{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin-bottom: .5em;
+      }
+      .rrss-holder > * {
+        font-size: 1.7em;
+        color: var(--text-color-second);
+        cursor: pointer;
+      }
+    .main-btn {
+        width: 50%;
+    }
+    .separate-gt {
+        padding-left: .4em;
+    }
+    .main-info-holder {
+      display: flex;
+      flex-direction: column;
+      margin: 3em 0 3em 0;
+      text-align: center;
+      align-items: center;
+    }
+    
+    .main-title {
+        width: 100%;
+      font-size: 3.9em;
+      text-align: center;
+    }
+    
+    .second-title {
+      font-size: 1.5em;
+      flex-direction: column;
+    }
+  }

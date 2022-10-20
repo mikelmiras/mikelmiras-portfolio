@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
-}
+html {
+  --general-font: 'Montserrat', sans-serif;
+  --bg-color: #0F110C;
+  --bg-color-lighter: #1e2119;
+  --text-color-main: #a9a8a8;
+  --text-color-second: #5C6D70;
+  scroll-behavior: smooth;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rrssa {
+  text-decoration: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background-color: var(--bg-color);
+opacity: 1;
+background-image: radial-gradient(var(--bg-color-lighter) 0.7px, var(--bg-color) 0.7px);
+background-size: 10px 10px;
+}
+h1 {
+  font-family: var(--general-font);
+  color: var(--text-color-main);
+}
+.subsection-title {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  font-family: var(--general-font);
+  text-decoration: underline;
+  color: var(--text-color-second);
+}
+p {
+  font-family: var(--general-font);
+  color: var(--text-color-second);
+}
+.second-title {
+  display: flex;
+  align-items: center;
+}
+.main-info-holder {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+}
+.main-btn {
+  border: solid 2px var(--text-color-second);
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-items: center;
+  transition: .5s all ease;
+}
+.main-btn-a {
+  text-decoration: none;
+}
+.btn-p {
+  font-weight: 500;
+}
+.main-btn:hover{
+  background-color: var(--text-color-second);
+  transition: .5s all ease;
+  color: var(--bg-color) !important;
+}
+
+.main-btn:hover > .main-btn-a > .btn-p {
+  color: var(--bg-color);
+}
+
+
+@keyframes cursor {
+  0% {
+    border-right: 2px solid white;
+  }
+  100%{  border-right: 0px white solid;}
+}
+
+
+
+.supremo {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  right: 1.6em;
+  background-color: var(--text-color-second);
+  padding: 0 .6em;
+  line-height: 0;
+  border-radius: 16px 16px 0 0;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.content > a {
+  color: white !important;
+  text-decoration: none;
+}
+.content > a > p {
+  color: white !important;
+  display: flex;
+  align-items: center;
+}
+
+.notvisible {
+  display: none !important;
+}
+
+.close {
+  position: absolute;
+  top: 3px;
+  bottom: 0;
+  left: 74px;
+  font-size: .8em;
+  cursor: pointer;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
