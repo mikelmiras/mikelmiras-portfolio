@@ -67,8 +67,6 @@ function App() {
   </section>
   </>    
   );
-
-  
 }
 
 
