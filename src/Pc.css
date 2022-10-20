@@ -1,6 +1,31 @@
 @media (min-width: 900px){
+    li {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+      }
+      
+      .logo-holder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        align-content: center;
+      }
+      .mmodsgtav-logo {
+        height: 14em;
+        width: auto;
+      }
+      
+      .text-holder {
+        width: 50%;
+      }
+    .project-list {
+        margin-left: 6em;
+    }
     .subsection-title {
-        margin-left: 3.5em;
+        margin-left: 5em;
     }
     .separate {
         margin-left: .4em;

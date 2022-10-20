@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 html {
   --general-font: 'Montserrat', sans-serif;
   --bg-color: #0F110C;
@@ -25,8 +26,19 @@ h1 {
   align-items: center;
   font-family: var(--general-font);
   text-decoration: underline;
-  color: var(--text-color-second);
+  color: white;
+
 }
+
+.project-main-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-size: 1.9em;
+  color: white;
+}
+
 p {
   font-family: var(--general-font);
   color: var(--text-color-second);
@@ -71,7 +83,9 @@ p {
   100%{  border-right: 0px white solid;}
 }
 
-
+.logo-holder {
+  flex-direction: column;
+}
 
 .supremo {
   z-index: 100;
@@ -112,3 +126,32 @@ p {
   cursor: pointer;
   color: white;
 }
+
+ul {
+  list-style-type: none;
+}
+
+h3 {
+  font-family: var(--general-font);
+}
+
+
+.reference {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--text-color-second) !important;
+}
+.reference {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.reference-a{
+  text-decoration: underline;
+  color: var(--text-color-second) !important;
+}
+
