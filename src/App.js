@@ -72,7 +72,6 @@ function App() {
         <p>Logo del proyecto</p>
       </div>
       </li>
-
    </ul>
    <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Formación:</h2> 
    <ul className="project-list">
@@ -81,7 +80,6 @@ function App() {
    <p className="mobile-text">
     Actualmente estoy estudiando segundo año de Ingeniería Informática en la UPV/EHU.
    </p>
-   <hr/>
    </div>
    </li>
    </ul>
@@ -94,7 +92,6 @@ function App() {
     <br/>
     También tengo experiencia en <b>Python</b> desarrollando bots para Discord y en otras plataformas como .NET de Microsoft. 
    </p>
-   <hr/>
    </div>
    </li>
    </ul>
