@@ -43,7 +43,7 @@ function App() {
       <p className="mobile-text">Mmods GTA V es un proyecto que comienza en 2018 y que consiste en introducir vehículos reales (mayormente de emergencias) en el videojuego GTA 5 a través de los mods.
         <br/>
         <br/>
-        Ahora mismo este proyecto lleva casi 5 años activo, y cuenta con más de <strong>300 vehículos</strong> y modificaciones de todo tipo realizadas.
+        Actualmente este proyecto lleva casi 5 años activo, y cuenta con más de <strong>300 vehículos</strong> y modificaciones de todo tipo realizadas.
         <br/>
         <br/>
         Mis trabajos para este proyecto han sido referenciados en medios como <b>ABC de Sevilla</b>, <b>El Español</b> y <b>En Castilla la Mancha</b> entre otros; así como también en redes sociales oficiales de distinas instituciones.
