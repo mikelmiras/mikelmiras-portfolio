@@ -74,6 +74,41 @@ function App() {
       </div>
       </li>
    </ul>
+
+   <ul className="project-list">
+    <li>
+      <div className="text-holder">
+      <h3 className="project-main-title">gta5mods.es</h3>
+      <p className="mobile-text">gta5mods.es es una página web desarrollada junto a Alejandro Pereira que fue lanzada en febrero de 2021. Esta página alberga una comunidad de mods de GTA 5 basada en España.
+        <br/>
+        <br/>
+        Esta página permite a los usuarios subir y descargar mods para el GTA 5, así como charlar y solicitar asitencia técnica en los foros.
+        <br/>
+        <br/>
+        Esta página cuenta con cerca de <b>4000</b> usuarios registrados, <b>60.000</b> descargas de archivos y <b>700</b> archivos publicados por la comunidad.
+        <br/>
+        <br/>
+        Actualmente nuestra página web es líder en la comunidad española.
+        <br/>
+        <br/>
+        <b className="white">
+          <u>Redes sociales y enlaces a gta5mods.es:</u></b>
+          <div className="rrss-box-holder">
+          <Box icon={<AiOutlineHome/>} text="Web" goto="https://gta5mods.es"/>
+          <Box icon={<AiOutlineTwitter/>} text="Twitter" goto="https://twitter.com/GTA5Mods_Es"/>
+          <Box icon={<AiOutlineInstagram/>} text="Instagram" goto="https://instagram.com/gta5mods_es"/>
+          </div>
+      </p>
+      <hr/>
+      </div>
+      <div className="logo-holder">
+        <img className="mmodsgtav-logo" src="https://mikelm.eus/static/gmods.png"/>
+        <p>Logo del proyecto</p>
+      </div>
+      </li>
+   </ul>
+
+   
    <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Formación:</h2> 
    <ul className="project-list">
     <li>
@@ -84,6 +119,7 @@ function App() {
    </div>
    </li>
    </ul>
+
    <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Experiencia:</h2> 
    <ul className="project-list">
     <li>
