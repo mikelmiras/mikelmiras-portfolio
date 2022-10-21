@@ -7,6 +7,7 @@ import {AiOutlineHome, AiOutlineTwitter, AiOutlineClose, AiOutlineInstagram, AiF
 import {VscDebugBreakpointDataUnverified, VscDebugBreakpointFunction} from "react-icons/vsc"
 import { useState } from "react";
 import {FaTiktok} from "react-icons/fa"
+import Footer from "./Footer";
 function App() {
   const [display, notDisplay] = useState();
   return (
@@ -110,6 +111,7 @@ function App() {
    </li>
    </ul>
   </section>
+  <Footer/>
   </>    
   );
   

@@ -167,3 +167,16 @@ h3 {
 .white {
   color: white !important;
 }
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer > hr {
+  width: 100%;
+}
