@@ -1,4 +1,7 @@
 @media (min-width: 900px){
+  .mid-hr {
+    width: 50%;
+  }
     .rrss-box-holder {
         margin-top: 1em;
         display: flex;
