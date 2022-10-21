@@ -155,3 +155,15 @@ h3 {
   color: var(--text-color-second) !important;
 }
 
+
+.rrss-box > a{
+  text-decoration: none;
+  color: white;
+}
+.rrss-box > a > p{
+  color: white;
+}
+
+.white {
+  color: white !important;
+}
