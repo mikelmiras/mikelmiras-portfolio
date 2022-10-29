@@ -2,6 +2,10 @@
   .mid-hr {
     width: 50%;
   }
+  .mobile-text {
+    font-size: 1.3em;
+    text-align: justify;
+  }
     .rrss-box-holder {
         margin-top: 1em;
         display: flex;

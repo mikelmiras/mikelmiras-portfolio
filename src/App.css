@@ -4,7 +4,7 @@ html {
   --bg-color: #0F110C;
   --bg-color-lighter: #1e2119;
   --text-color-main: #a9a8a8;
-  --text-color-second: #5C6D70;
+  --text-color-second: #c5dfe5;
   scroll-behavior: smooth;
 
 }
@@ -87,12 +87,13 @@ p {
   flex-direction: column;
 }
 
+
 .supremo {
   z-index: 100;
   position: fixed;
   bottom: 0;
   right: 1.6em;
-  background-color: var(--text-color-second);
+  background-color: #5a6c70;
   padding: 0 .6em;
   line-height: 0;
   border-radius: 16px 16px 0 0;
@@ -154,11 +155,23 @@ h3 {
   text-decoration: underline;
   color: var(--text-color-second) !important;
 }
-
+.box-icon-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  width: 80%;
+}
 
 .rrss-box > a{
   text-decoration: none;
   color: white;
+}
+.box-icon-holder-a {
+  display: flex;
+  width: 80%;
+  justify-content: center;
 }
 .rrss-box > a > p{
   color: white;

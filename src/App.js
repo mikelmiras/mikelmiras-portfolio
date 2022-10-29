@@ -13,7 +13,7 @@ function App() {
   return (
   <>
   <div className={"supremo " + display}>
-    {<AiOutlineClose className="close" onClick={() => {
+    {<AiOutlineClose title="Cerrar" className="close" onClick={() => {
       notDisplay("notvisible")
     }}/>}
     <div className="content">
@@ -29,7 +29,7 @@ function App() {
         <a target="_blank" href="https://twitter.com/mikelmiras_" className="rrss-a"><AiOutlineTwitter/> </a>
         <a target="_blank" href="https://instagram.com/mikelmiras_" className="rrss-a"><AiOutlineInstagram/></a>
         <a target="_blank" href="https://github.com/mikelmiras" className="rrss-a"><AiFillGithub/></a>
-        <a target="_blank" href="mailto:m@mikelmiras.com" className="rrss-a"><AiOutlineMail/></a>
+        <a title="m@mikelmiras.com" target="_blank" href="mailto:m@mikelmiras.com" className="rrss-a"><AiOutlineMail/></a>
       </>
     }
   </div>
@@ -41,7 +41,7 @@ function App() {
     <li>
       <div className="text-holder">
       <h3 className="project-main-title">Mmods GTA V</h3>
-      <p className="mobile-text">Mmods GTA V es un proyecto que comienza en 2018 y que consiste en introducir vehículos reales (mayormente de emergencias) en el videojuego GTA 5 a través de los mods.
+      <p className="mobile-text justified">Mmods GTA V es un proyecto que comienza en 2018 y que consiste en introducir vehículos reales (mayormente de emergencias) en el videojuego GTA 5 a través de los mods.
         <br/>
         <br/>
         Actualmente este proyecto lleva casi 5 años activo, y cuenta con más de <strong>300 vehículos</strong> y modificaciones de todo tipo realizadas.
@@ -74,7 +74,7 @@ function App() {
 
       </li>
    </ul>
-   <hr className="mid-hr"/>
+   <hr noshade className="mid-hr"/>
    <ul className="project-list">
     <li>
       <div className="text-holder">
@@ -107,6 +107,16 @@ function App() {
       </li>
    </ul>
    <hr className="mid-hr"/>
+   <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Sobre mí:</h2> 
+   <ul className="project-list">
+    <li>
+      <div className="text-holder">
+   <p className="mobile-text">
+    Actualmente estoy estudiando segundo año de Ingeniería Informática en la UPV/EHU.
+   </p>
+   </div>
+   </li>
+   </ul>
    <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Formación:</h2> 
    <ul className="project-list">
     <li>
@@ -175,9 +185,9 @@ function Box(props){
   return(
     <>
     <div className="rrss-box">
-      <a target="_blank" href={props.goto}>
-        <p>
-          {props.icon} {props.text} 
+      <a className="box-icon-holder-a" target="_blank" href={props.goto}>
+        <p className="box-icon-holder">
+        <span>{props.icon}</span> {props.text}
         </p>
       </a>
     </div>
