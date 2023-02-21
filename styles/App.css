@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html {
+  --general-font: 'Montserrat', sans-serif;
+  --bg-color: #0F110C;
+  --bg-color-lighter: #1e2119;
+  --text-color-main: #a9a8a8;
+  --text-color-second: #c5dfe5;
+  scroll-behavior: smooth;
+
+}
+.lecture-time {
+  display: flex;
+  gap: .5em;
+  justify-content: center;
+  align-items: center;
+}
+.article-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: left;
+  align-items: center;
+  gap: .3em;
+}
+.date {
+  color: #9BC59D;
+}
+.blog-holder > * {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: left;
+  width: 100%;
+}
+.blog-holder > ul {
+  width: 100%;
+  text-align: left;
+  padding: 0;
+}
+.blog-holder>blockquote > * {
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+}
+.blog-holder > h1 {
+  color: white;
+  font-size: 2.25rem;
+  text-align: left;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.25;
+}
+.blog-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.blog-holder > p {
+  font-size: 1.2em;
+}
+.blog-holder {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  justify-self: center;
+  align-items: center;
+  padding: 4em 0;
+  text-align: left;
+  justify-content: center;
+}
+.rrssa {
+  text-decoration: none;
+}
+body{
+  background-color: var(--bg-color);
+opacity: 1;
+background-image: radial-gradient(var(--bg-color-lighter) 0.7px, var(--bg-color) 0.7px);
+background-size: 10px 10px;
+}
+h1 {
+  font-family: var(--general-font);
+  color: var(--text-color-main);
+}
+.subsection-title {
+  display: flex;
+  align-items: center;
+  font-family: var(--general-font);
+  text-decoration: underline;
+  color: white;
+
+}
+
+.project-main-title {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-size: 1.9em;
+  color: white;
+}
+
+p {
+  font-family: var(--general-font);
+  color: var(--text-color-second);
+}
+.second-title {
+  display: flex;
+  align-items: center;
+}
+.main-info-holder {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+}
+.main-btn {
+  border: solid 2px var(--text-color-second);
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  transition: .5s all ease;
+}
+.main-btn-a {
+  text-decoration: none;
+}
+.btn-p {
+  font-weight: 500;
+}
+.main-btn:hover{
+  background-color: var(--text-color-second);
+  transition: .5s all ease;
+  color: var(--bg-color) !important;
+}
+
+.main-btn:hover > .main-btn-a > .btn-p {
+  color: var(--bg-color);
+}
+
+
+@keyframes cursor {
+  0% {
+    border-right: 2px solid white;
+  }
+  100%{  border-right: 0px white solid;}
+}
+
+.logo-holder {
+  flex-direction: column;
+}
+
+
+.supremo {
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  right: 1.6em;
+  background-color: #5a6c70;
+  padding: 0 .6em;
+  line-height: 0;
+  border-radius: 16px 16px 0 0;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+}
+
+.content > a {
+  color: white !important;
+  text-decoration: none;
+}
+.content > a > p {
+  color: white !important;
+  display: flex;
+  align-items: center;
+}
+
+.notvisible {
+  display: none !important;
+}
+
+.close {
+  position: absolute;
+  top: 3px;
+  bottom: 0;
+  left: 74px;
+  font-size: .8em;
+  cursor: pointer;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h3 {
+  font-family: var(--general-font);
+}
+
+
+.reference {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--text-color-second) !important;
+}
+.reference {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.reference-a{
+  text-decoration: underline;
+  color: var(--text-color-second) !important;
+}
+.box-icon-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  width: 80%;
+}
+
+.rrss-box > a{
+  text-decoration: none;
+  color: white;
+}
+.box-icon-holder-a {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+}
+.rrss-box > a > p{
+  color: white;
+}
+
+.white {
+  color: white !important;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer > hr {
+  width: 100%;
+}
+
+h4 {
+  font-size: 1em;
+}

@@ -1,0 +1,116 @@
+@media (max-width: 900px){
+  .blog-holder { 
+    width: 95%;
+  }
+  .article-data {
+    display: flex;
+    gap: .3em;
+    width: 100%;
+    justify-content: center;
+    text-align: left;
+    flex-wrap: wrap;
+  }
+  .blog-holder > p {
+    font-size: 1.2em;
+  }
+  h4 {
+    font-size: .8em;
+  }
+  .mid-hr {
+    width: 90%;
+  }
+    .rrss-box-holder {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .rrss-box {
+        width: 60%;
+        height: 2.5em;
+        display: flex;
+        flex-direction: row;
+        margin: .3em 0;
+        padding: 0;
+        border: solid 2px white;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        border-radius: 10px;
+
+      }
+    .reference {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .mobile-text {
+        font-size: 1.4em;
+    }
+    ul {
+        padding: 0;
+    }
+    .text-holder > p{
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-between;
+      }
+      
+      .logo-holder {
+        margin: 1.5em 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+      .mmodsgtav-logo {
+        height: 16em;
+        width: auto;
+      }
+      
+      .text-holder {
+        width: 100%;
+      }
+    .rrss-holder{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        margin-bottom: .5em;
+      }
+      .rrss-holder > * {
+        font-size: 1.7em;
+        color: var(--text-color-second);
+        cursor: pointer;
+      }
+    .main-btn {
+        width: 50%;
+    }
+    .separate-gt {
+        padding-left: .4em;
+    }
+    .main-info-holder {
+      display: flex;
+      flex-direction: column;
+      margin: 3em 0 3em 0;
+      text-align: center;
+      align-items: center;
+    }
+    
+    .main-title {
+        width: 100%;
+      font-size: 3.9em;
+      text-align: center;
+    }
+    
+    .second-title {
+      font-size: 1.5em;
+      flex-direction: column;
+    }
+  }

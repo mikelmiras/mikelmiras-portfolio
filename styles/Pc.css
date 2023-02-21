@@ -1,0 +1,87 @@
+@media (min-width: 900px){
+  .mid-hr {
+    width: 50%;
+  }
+  .mobile-text {
+    font-size: 1.3em;
+    text-align: justify;
+  }
+    .rrss-box-holder {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .rrss-box {
+        width: 20%;
+        height: 2.5em;
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        border: solid 2px white;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        border-radius: 10px;
+      }
+    li {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+      }
+      
+      .logo-holder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        align-content: center;
+      }
+      .mmodsgtav-logo {
+        height: 14em;
+        width: auto;
+      }
+      
+      .text-holder {
+        width: 50%;
+      }
+    .project-list {
+        margin-left: 6em;
+    }
+    .subsection-title {
+        margin-left: 5em;
+    }
+    .separate {
+        margin-left: .4em;
+      }
+      .rrss-holder{
+        display: flex;
+        justify-content: space-around;
+        width: 15%;
+        margin-bottom: .5em;
+      }
+      .rrss-holder > * {
+        font-size: 1.7em;
+        color: var(--text-color-second);
+        cursor: pointer;
+      }
+    .main-btn {
+        width: 15%;
+    }
+    .main-info-holder {
+      display: flex;
+      flex-direction: column;
+      margin: 8em 0 0 8em;
+    }
+    
+    .main-title {
+      font-size: 5em;
+    }
+    
+    .second-title {
+      font-size: 2em;
+    }
+  }
