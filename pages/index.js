@@ -17,7 +17,7 @@ export default function Home() {
       notDisplay("notvisible")
     }}/>}
     <div className="content">
-      <a href="https://github.com/mikelmiras/mikelmiras-portfolio" target="_blank"><p>Ver en {<AiFillGithub className="separate separate-gt"/>}</p></a>
+      <a href="https://github.com/mikelmiras/mikelmiras-portfolio" target="_blank" rel="noreferrer"><p>Ver en {<AiFillGithub className="separate separate-gt"/>}</p></a>
     </div>
   </div>
   <section className="main-info-holder">
@@ -26,11 +26,11 @@ export default function Home() {
   <div className="rrss-holder animate__animated animate__fadeInUp">
     {
       <>
-        <a target="_blank" href="https://twitter.com/mikelmiras_" className="rrss-a"><AiOutlineTwitter/> </a>
-        <a target="_blank" href="https://instagram.com/mikelmiras_" className="rrss-a"><AiOutlineInstagram/></a>
-        <a target="_blank" href="https://github.com/mikelmiras" className="rrss-a"><AiFillGithub/></a>
-        <a target="_blank" href="https://leetcode.com/mikelmiras/" className="rrss-a"><SiLeetcode/></a> 
-        <a title="m@mikelmiras.com" target="_blank" href="mailto:m@mikelmiras.com" className="rrss-a"><AiOutlineMail/></a>
+        <a target="_blank" rel="noreferrer" href="https://twitter.com/mikelmiras_" className="rrss-a"><AiOutlineTwitter/> </a>
+        <a target="_blank" rel="noreferrer" href="https://instagram.com/mikelmiras_" className="rrss-a"><AiOutlineInstagram/></a>
+        <a target="_blank" rel="noreferrer" href="https://github.com/mikelmiras" className="rrss-a"><AiFillGithub/></a>
+        <a target="_blank" rel="noreferrer" href="https://leetcode.com/mikelmiras/" className="rrss-a"><SiLeetcode/></a> 
+        <a title="m@mikelmiras.com" target="_blank" rel="noreferrer" href="mailto:m@mikelmiras.com" className="rrss-a"><AiOutlineMail/></a>
       </>
     }
   </div>
@@ -101,13 +101,13 @@ export function Reference(props){
   if (props.media){
     return(
       <>
-      <a target="_blank" className="reference-a" href={props.goto}><p className="reference">{<VscDebugBreakpointFunction className="white"/>} <span>{props.text}, {props.media}</span></p></a>
+      <a target="_blank" rel="noreferrer" className="reference-a" href={props.goto}><p className="reference">{<VscDebugBreakpointFunction className="white"/>} <span>{props.text}, {props.media}</span></p></a>
       </>
     )
   }else{
     return(
       <>
-      <a target="_blank" className="reference-a" href={props.goto}><p className="reference">{<AiOutlineTwitter className="white"/>} <span>{props.text}</span></p></a>
+      <a target="_blank" rel="noreferrer" className="reference-a" href={props.goto}><p className="reference">{<AiOutlineTwitter className="white"/>} <span>{props.text}</span></p></a>
       </>
     )
   }
@@ -117,7 +117,7 @@ export function Reference(props){
     return(
       <>
       <div className="rrss-box">
-        <a className="box-icon-holder-a" target="_blank" href={props.goto}>
+        <a className="box-icon-holder-a" target="_blank" rel="noreferrer" href={props.goto}>
           <p className="box-icon-holder">
           <span>{props.icon}</span> {props.text}
           </p>
