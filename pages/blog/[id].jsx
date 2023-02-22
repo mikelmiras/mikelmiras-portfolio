@@ -2,15 +2,17 @@ import Footer from "../../components/Footer";
 import ReactMarkdown from "react-markdown";
 import {BsCalendarDate, BsClock} from "react-icons/bs"
 import Header from "../../components/Header";
+import { months } from "../../util";
 export default function Blog({response}){
+    const date = new Date(response.data.date)
     return(
         <>
-        <Header/>
+        <Header selected={"blog"}/>
         <div className="blog-wrapper">
         <section className="blog-holder">
         <h1>{response.data.title}</h1>
         <span className="article-data">
-            <span className="date-holder"><BsCalendarDate/> <span className="date"> 21 de febrero, 2023</span></span>
+            <span className="date-holder"><BsCalendarDate/> <span className="date"> {date.getDate()  + " de " + months[date.getMonth()] + ", " + date.getFullYear()}</span></span>
             <span className="lecture-time"><BsClock/> {calculateReadingTime(response.data.content)} minutos de lectura</span>
         </span>
          <ReactMarkdown>{response.data.content.replaceAll("\\n", "\n")}</ReactMarkdown>

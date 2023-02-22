@@ -9,6 +9,17 @@ html {
   scroll-behavior: smooth;
 
 }
+.selected-menu-item {
+  border-top: solid .1em var(--text-color-main);
+}
+.item {
+  box-sizing: border-box;
+  padding: .3em .2em;
+  height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .items{
   display: flex;
   gap: 2em;

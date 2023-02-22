@@ -3,7 +3,9 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { useEffect } from "react"
 import { useState } from "react"
-export default function Header(){
+export default function Header(props){
+    let specialClasses = ["", ""]
+    if (props.selected =="blog") specialClasses[1] = "selected-menu-item"
     const router = useRouter()
     const [goBack, setGoBack] = useState(<><span className="goback"></span></>)
     useEffect((e)=>{
@@ -21,8 +23,8 @@ export default function Header(){
             <nav>
               {goBack} 
                 <span className="items">
-                    <MenuItem text="🏡 Inicio" url="/"/>
-                    <MenuItem text={"📝 Blog"} url={"/blog"}/>
+                    <MenuItem specialclass={specialClasses[0]} text="🏡 Inicio" url="/"/>
+                    <MenuItem specialclass={specialClasses[1]} text={"📝 Blog"} url={"/blog"}/>
                 </span>
             </nav>
         </header>
@@ -30,6 +32,6 @@ export default function Header(){
 }
 
 
-function MenuItem({text, url}){
-    return(<span className="item"><Link href={url}>{text}</Link></span>)
+function MenuItem({text, url, specialclass}){
+    return(<span className={"item " + specialclass}><Link href={url}>{text}</Link></span>)
 }
