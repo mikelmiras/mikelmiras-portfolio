@@ -10,7 +10,12 @@ export default async function handler(req, res){
           }
             });
 
-            const data = await db.query('SELECT title, content, date, slug FROM posts WHERE public = 1 ORDER BY date DESC');
+            let data
+            if (req.body.allowprivate == process.env.POST_PASS){
+              data = await db.query('SELECT title, content, date, slug, public FROM posts ORDER BY date DESC');
+            }else{
+              data = await db.query('SELECT title, content, date, slug, public FROM posts WHERE public = 1 ORDER BY date DESC');
+            }
             await db.end();
             res.status(200).json({"status":true, "data":data})
 
