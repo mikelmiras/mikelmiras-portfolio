@@ -9,6 +9,57 @@ html {
   scroll-behavior: smooth;
 
 }
+.items{
+  display: flex;
+  gap: 2em;
+}
+.item > * {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+header > nav {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  font-family: var(--general-font);
+  color: white;
+  width: 55%;
+  justify-content: space-between;
+  align-items: center;
+}
+.goback {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+}
+.goback > * {
+  text-decoration: none;
+  color: white;
+}
+header > hr {
+  border-top: solid 2px #EF8354;
+  background-color: #EF8354;
+  color: #EF8354;
+  border-radius: 5px;
+  outline: none;
+  width: 55%;
+  
+}
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
 .lecture-time {
   display: flex;
   gap: .5em;
@@ -22,7 +73,7 @@ html {
   width: 100%;
   text-align: left;
   align-items: center;
-  gap: .3em;
+  gap: 4em;
 }
 .date {
   color: #9BC59D;
