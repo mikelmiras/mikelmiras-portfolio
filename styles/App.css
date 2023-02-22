@@ -52,6 +52,9 @@ header > .hr {
   width: 55%;
   
 }
+.linked-h2 > * {
+  color: white;
+}
 header {
   display: flex;
   flex-direction: column;
@@ -75,7 +78,7 @@ header {
   width: 100%;
   text-align: left;
   align-items: center;
-  gap: 4em;
+  gap: 2em;
 }
 .date {
   color: #9BC59D;

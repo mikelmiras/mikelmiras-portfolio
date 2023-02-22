@@ -10,7 +10,12 @@ export default async function handler(req, res){
             database:process.env.DBNAME
           }
             });
-            const data = await db.query("SELECT * FROM posts WHERE slug = ?", [req.query.id])
+            const data = await db.query("SELECT * FROM posts WHERE public = 1 AND slug = ?", [req.query.id])
             await db.end()
-    res.status(200).json({"status":true, "data":data[0]})
+            if (data[0] == undefined){
+              res.status(404).json({"status":false, "message":"404 Not found"})
+            }else{
+              res.status(200).json({"status":true, "data":data[0]})
+            }
+            
 }

@@ -29,7 +29,7 @@ export async function getServerSideProps(context){
     const {id} = params
     const data = await fetch(process.env.FETCH_URL + id)
     const response = await data.json()
-    if (!response.data){
+    if (data.status == 404){
         return{
             notFound:true,
         }

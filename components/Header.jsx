@@ -1,16 +1,28 @@
 import {IoIosArrowBack} from "react-icons/io"
 import Link from "next/link"
+import { useRouter } from "next/router"
+import { useEffect } from "react"
+import { useState } from "react"
 export default function Header(){
+    const router = useRouter()
+    const [goBack, setGoBack] = useState(<><span className="goback"></span></>)
+    useEffect((e)=>{
+        if (window.history.length > 2){
+            setGoBack(<span className="goback">
+            <span onClick={(e)=>{
+                router.back()
+            }}><IoIosArrowBack/> Volver</span>
+            </span>)
+        }
+    }, [])
     return(
         <header>
             <div className="hr"></div>
             <nav>
-                <span className="goback">
-                <Link href="/"><IoIosArrowBack/> Volver</Link>
-                </span>
+              {goBack} 
                 <span className="items">
                     <MenuItem text="🏡 Inicio" url="/"/>
-                    <MenuItem text={"✒ Blog"} url={"/blog"}/>
+                    <MenuItem text={"📝 Blog"} url={"/blog"}/>
                 </span>
             </nav>
         </header>
