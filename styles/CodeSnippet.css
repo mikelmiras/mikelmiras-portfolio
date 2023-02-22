@@ -1,0 +1,7 @@
+.blog-holder > p > code {
+    background-color: #1e2119;
+    color: white;
+    padding: 1em 2em;
+    box-sizing: border-box;
+    border-radius: 10px;
+}

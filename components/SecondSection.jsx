@@ -13,7 +13,7 @@ export default function SecondSection(){
          <section id="projects" className="second-section">
          <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Proyectos:</h2> 
    <ul className="project-list">
-    <li>
+    <li className="index-li">
       <div className="text-holder">
       <h3 className="project-main-title">Mmods GTA V</h3>
       <p className="mobile-text justified">Mmods GTA V es un proyecto que comienza en 2018 y que consiste en introducir vehículos reales (mayormente de emergencias) en el videojuego GTA 5 a través de los mods.
@@ -55,7 +55,7 @@ export default function SecondSection(){
    </ul>
    <hr className="mid-hr"/>
    <ul className="project-list">
-    <li>
+    <li className="index-li">
       <div className="text-holder">
       <h3 className="project-main-title">gta5mods.es</h3>
       <p className="mobile-text">gta5mods.es es una página web desarrollada junto a Alejandro Pereira que fue lanzada en febrero de 2021. Esta página alberga una comunidad de mods de GTA 5 basada en España.
@@ -90,7 +90,7 @@ export default function SecondSection(){
    <hr className="mid-hr"/>
    <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Sobre mí:</h2> 
    <ul className="project-list">
-    <li>
+    <li className="index-li">
       <div className="text-holder">
    <p className="mobile-text">
     Soy una persona con iniciativa que busca aprender y crecer continuamente. Mis aficiones son la música, tocar la batería y, por supuesto, la informática y el desarrollo de software. Mi afición por esto último empezó hace años, y desde hace más de 4 he aprendido y me he formado por mi cuenta realizando proyectos. 
@@ -100,7 +100,7 @@ export default function SecondSection(){
    </ul>
    <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Formación:</h2> 
    <ul className="project-list">
-    <li>
+    <li className="index-li">
       <div className="text-holder">
       <p className="mobile-text">
     Actualmente estoy estudiando segundo año de Ingeniería Informática en la UPV/EHU.
@@ -111,7 +111,7 @@ export default function SecondSection(){
 
    <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Experiencia:</h2> 
    <ul className="project-list">
-    <li>
+    <li className="index-li">
       <div className="text-holder">
    <p className="mobile-text">
     Experiencia demostrable en el ámbito del desarrollo web. Conocimientos en <b>PHP</b>, <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b> y frameworks JS como <b>React</b> o <b>NextJS</b>; así como experiencia en el manejo de bases de datos relacionales como <b>MySQL</b> y en el desarrollo de API Rests.
@@ -124,7 +124,7 @@ export default function SecondSection(){
 
    <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Contacto:</h2> 
    <ul className="project-list">
-    <li>
+    <li className="index-li">
       <div className="text-holder">
       <div className="rrss-box-holder">
           <Box icon={<AiOutlineTwitter/>} text="Twitter" goto="https://twitter.com/mikelmiras_"/>

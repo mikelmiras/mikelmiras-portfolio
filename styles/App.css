@@ -9,6 +9,78 @@ html {
   scroll-behavior: smooth;
 
 }
+.title-input {
+  font-weight: 900;
+}
+.post-form > textarea {
+  min-height: 10em;
+}
+.post-form > input, .post-form > textarea {
+    font-family: 'Poppins', sans-serif;
+    background: none;
+    max-width: 100%;
+    min-width: 100%;
+    outline: none;
+    border: none;
+    font-size: 1.2em;
+    border-bottom: solid #EF8354 1px;
+    color: white;
+    padding: .5em 1em;
+    width: 100%;
+}
+.post-btn {
+  width: 100% !important;
+  min-width: 100%;
+  box-sizing: border-box;
+  margin: 0 !important;
+  cursor: pointer;
+  border: solid 2px #EF8354 !important;
+  transition: .5s all ease;
+}
+.post-btn:hover {
+  background-color: #323232;
+  transition: .5s all ease;
+}
+.blog-holder > li {
+
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.blog-holder > ul {
+  list-style-type: disc !important;
+  margin-left: 4em;
+}
+.blog-holder > ul > li {
+  list-style-type: disc;
+}
+.blog-holder > blockquote {
+  background-color: #1e2119;
+  color: white;
+  padding: 1em 2em;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.blog-holder > p > a {
+  color: #EF8354 !important;
+}
+.form-input::placeholder {
+  color: white;
+  
+}
+.form-input:focus {
+  outline: none;
+  border-bottom: white 1px solid;
+  transition: .5s all ease;
+}
+.post-form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  flex-direction: column;
+}
 .selected-menu-item {
   border-top: solid .1em var(--text-color-main);
 }
