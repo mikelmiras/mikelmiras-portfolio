@@ -9,6 +9,8 @@ import Footer from "../components/Footer";
 import SecondSection from "../components/SecondSection";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import Head from "next/head";
+
+
 export default function Home() {
   const [display, notDisplay] = useState();
   return (
