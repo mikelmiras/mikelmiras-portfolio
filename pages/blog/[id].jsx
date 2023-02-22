@@ -17,9 +17,9 @@ export default function Blog({response}){
             <span className="lecture-time"><BsClock/> {calculateReadingTime(response.data.content)} minutos de lectura</span>
         </span>
         <span className="notvisible" itemProp="url">https://mikelmiras.com/blog/{response.data.slug}</span>
-        <span itemProp="articleBody">
-         <ReactMarkdown>{response.data.content.replaceAll("\\n", "\n")}</ReactMarkdown>
-         </span>
+        
+         <ReactMarkdown itemProp="articleBody">{response.data.content.replaceAll("\\n", "\n")}</ReactMarkdown>
+         
    </section>
         </div>
         <Footer/>
