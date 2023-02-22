@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function Header(){
     return(
         <header>
-            <hr/>
+            <div className="hr"></div>
             <nav>
                 <span className="goback">
                 <Link href="/"><IoIosArrowBack/> Volver</Link>

@@ -41,11 +41,13 @@ header > nav {
   text-decoration: none;
   color: white;
 }
-header > hr {
+header > .hr {
   border-top: solid 2px #EF8354;
   background-color: #EF8354;
+  margin: 1em 0;
   color: #EF8354;
-  border-radius: 5px;
+  border-radius: 25px;
+  height: .1em;
   outline: none;
   width: 55%;
   
