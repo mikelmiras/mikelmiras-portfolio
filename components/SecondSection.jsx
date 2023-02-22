@@ -93,7 +93,7 @@ export default function SecondSection(){
     <li>
       <div className="text-holder">
    <p className="mobile-text">
-    Actualmente estoy estudiando segundo año de Ingeniería Informática en la UPV/EHU.
+    Soy una persona con iniciativa que busca aprender y crecer continuamente. Mis aficiones son la música, tocar la batería y, por supuesto, la informática y el desarrollo de software. Mi afición por esto último empezó hace años, y desde hace más de 4 he aprendido y me he formado por mi cuenta realizando proyectos. 
    </p>
    </div>
    </li>
