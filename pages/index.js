@@ -8,10 +8,12 @@ import {SiLeetcode} from "react-icons/si"
 import Footer from "../components/Footer";
 import SecondSection from "../components/SecondSection";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import Head from "next/head";
 export default function Home() {
   const [display, notDisplay] = useState();
   return (
   <>
+  <GenericMeta/>
   <div className={"supremo " + display}>
     {<AiOutlineClose title="Cerrar" className="close" onClick={() => {
       notDisplay("notvisible")
@@ -39,58 +41,7 @@ export default function Home() {
   {
     // Starts second section
   }
-  <>
-         <section id="projects" className="second-section">
-         
-   <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Sobre mí:</h2> 
-   <ul className="project-list">
-    <li>
-      <div className="text-holder">
-   <p className="mobile-text">
-    Soy una persona con iniciativa que le gusta estar en constante aprendizaje y crecimiento. Mis aficiones son la música, tocar la batería y, por supuesto, la informática y el desarrollo de software. Me interesé por esta rama hace unos cuantos años y desde hace más de 4 llevo aprendiendo y desarrollado proyectos por mi cuenta.
-   </p>
-   </div>
-   </li>
-   </ul>
-   <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Formación:</h2> 
-   <ul className="project-list">
-    <li>
-      <div className="text-holder">
-      <p className="mobile-text">
-    Actualmente estoy estudiando segundo año de Ingeniería Informática en la UPV/EHU.
-   </p>
-   </div>
-   </li>
-   </ul>
-
-   <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Experiencia:</h2> 
-   <ul className="project-list">
-    <li>
-      <div className="text-holder">
-   <p className="mobile-text">
-    Experiencia demostrable en el ámbito del desarrollo web. Conocimientos en <b>PHP</b>, <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b> y frameworks JS como <b>React</b> o <b>NextJS</b>; así como experiencia en el manejo de bases de datos relacionales como <b>MySQL</b> y en el desarrollo de API Rests.
-    <br/>
-    También tengo experiencia en <b>Python</b> desarrollando bots para Discord y en otras plataformas como .NET de Microsoft. 
-   </p>
-   </div>
-   </li>
-   </ul>
-
-   <h2 className="subsection-title">{<VscDebugBreakpointDataUnverified/>} Contacto:</h2> 
-   <ul className="project-list">
-    <li>
-      <div className="text-holder">
-      <div className="rrss-box-holder">
-          <Box icon={<AiOutlineTwitter/>} text="Twitter" goto="https://twitter.com/mikelmiras_"/>
-          <Box icon={<AiOutlineInstagram/>} text="Instagram" goto="https://instagram.com/mikemiras_"/>
-          <Box icon={<AiFillGithub/>} text="Github" goto="https://github.com/mikelmiras"/>
-          <Box icon={<AiOutlineMail/>} text="Email" goto="mailto:m@mikelmiras.com"/>
-          </div>
-   </div>
-   </li>
-   </ul>
-  </section>
-        </>
+  <SecondSection/>
   <Footer/>
   </>    
   );
@@ -124,5 +75,37 @@ export function Reference(props){
         </a>
       </div>
       </>
+    )
+  }
+
+
+  export async function getServerSideProps(){
+    return{
+      props:{
+        
+      }
+    }
+  }
+
+
+  function Social(){
+    return(
+      <>
+              <h4>Redes sociales y enlaces a Mmods GTAV:</h4>
+          <div className="rrss-box-holder">
+          <Box icon={<AiOutlineHome/>} text="Web" goto="https://mmodsgtav.es"/>
+          <Box icon={<AiOutlineTwitter/>} text="Twitter" goto="https://twitter.com/mmodsgtav"/>
+          <Box icon={<AiOutlineInstagram/>} text="Instagram" goto="https://instagram.com/mmodsgtav"/>
+          <Box icon={<FaTiktok/>} text="TikTok" goto="https://tiktok.com/@mmodsgtav"/>
+          </div>
+      </>
+    )
+  }
+
+  function GenericMeta(){
+    return(
+      <Head>
+        <title>Mikel Miras</title>
+      </Head>
     )
   }

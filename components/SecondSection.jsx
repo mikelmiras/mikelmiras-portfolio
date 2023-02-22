@@ -25,6 +25,8 @@ export default function SecondSection(){
         Mis trabajos para este proyecto han sido referenciados en medios como <b>ABC de Sevilla</b>, <b>El Español</b> y <b>En Castilla la Mancha</b> entre otros; así como también en redes sociales oficiales de distinas instituciones.
         <br/>
         <br/>
+        </p>
+        <span className="role-p mobile-text">
         <h4><b className="white">Referencias en medios:</b></h4>
         <Reference media="ABC" text="La policía local de Sevilla, protagonista en el GTA V" goto="https://sevilla.abc.es/tecnologia/videojuegos/sevi-policia-local-sevilla-protagonista-202007151106_noticia.html"/>
         <Reference media="El Español" text="La Policía Foral, en el videojuego más vendido de la historia" goto="https://navarra.elespanol.com/articulo/sociedad/gtav-mods-forales-municipales-pamplona/20201222170514349854.html"/> 
@@ -33,6 +35,8 @@ export default function SecondSection(){
         <Reference text="Twitter de la Ertzaintza" goto="https://twitter.com/ertzaintzaEJGV/status/1462399103296540678"/>
         <Reference text="Twitter de la policía local de Alcorcón" goto="https://twitter.com/PoliciaAlcorcon/status/1572255413860536320"/>
         <br/>
+        </span>
+        <span className="role-p mobile-text">
         <h4><b className="white"><u>Redes sociales y enlaces a Mmods GTAV:</u></b></h4>
           <div className="rrss-box-holder">
           <Box icon={<AiOutlineHome/>} text="Web" goto="https://mmodsgtav.es"/>
@@ -40,7 +44,7 @@ export default function SecondSection(){
           <Box icon={<AiOutlineInstagram/>} text="Instagram" goto="https://instagram.com/mmodsgtav"/>
           <Box icon={<FaTiktok/>} text="TikTok" goto="https://tiktok.com/@mmodsgtav"/>
           </div>
-      </p>
+      </span>
       </div>
       <div className="logo-holder">
         <img className="mmodsgtav-logo" src="https://mmodsgtav.es/cdn/img/logo.png"/>
@@ -66,6 +70,8 @@ export default function SecondSection(){
         Actualmente nuestra página web es líder en la comunidad española.
         <br/>
         <br/>
+        </p>
+        <span className="role-p mobile-text">
         <b className="white">
           <h4><u>Redes sociales y enlaces a gta5mods.es:</u></h4></b>
           <div className="rrss-box-holder">
@@ -73,7 +79,7 @@ export default function SecondSection(){
           <Box icon={<AiOutlineTwitter/>} text="Twitter" goto="https://twitter.com/GTA5Mods_Es"/>
           <Box icon={<AiOutlineInstagram/>} text="Instagram" goto="https://instagram.com/gta5mods_es"/>
           </div>
-      </p>
+        </span>
       </div>
       <div className="logo-holder">
         <img className="mmodsgtav-logo" src="https://mikelm.eus/static/gmods.png"/>

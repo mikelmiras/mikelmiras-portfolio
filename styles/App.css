@@ -100,7 +100,10 @@ h1 {
   font-size: 1.9em;
   color: white;
 }
-
+.role-p {
+  font-family: var(--general-font);
+  color: var(--text-color-second);
+}
 p {
   font-family: var(--general-font);
   color: var(--text-color-second);
