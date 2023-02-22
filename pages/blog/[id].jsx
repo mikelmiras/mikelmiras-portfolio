@@ -8,14 +8,18 @@ export default function Blog({response}){
     return(
         <>
         <Header selected={"blog"}/>
-        <div className="blog-wrapper">
+        <div itemScope itemType="https://schema.org/TechArticle" className="blog-wrapper">
         <section className="blog-holder">
-        <h1>{response.data.title}</h1>
+        <h1 itemProp="name">{response.data.title}</h1>
+        <span className="notvisible" itemProp="author" itemType="Person">Mikel Miras</span>
         <span className="article-data">
-            <span className="date-holder"><BsCalendarDate/> <span className="date"> {date.getDate()  + " de " + months[date.getMonth()] + ", " + date.getFullYear()}</span></span>
+            <span itemProp="datePublished" datetime={date.toISOString()} className="date-holder"><BsCalendarDate/> <span className="date"> {date.getDate()  + " de " + months[date.getMonth()] + ", " + date.getFullYear()}</span></span>
             <span className="lecture-time"><BsClock/> {calculateReadingTime(response.data.content)} minutos de lectura</span>
         </span>
+        <span className="notvisible" itemProp="url">https://mikelmiras.com/blog/{response.data.slug}</span>
+        <span itemProp="articleBody">
          <ReactMarkdown>{response.data.content.replaceAll("\\n", "\n")}</ReactMarkdown>
+         </span>
    </section>
         </div>
         <Footer/>
