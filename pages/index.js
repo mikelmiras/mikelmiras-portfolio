@@ -48,7 +48,7 @@ export default function Home() {
   }
     <div className="sticky-wrapper">
   <span className="sticky-header">
-  <Header dontshowback={true}/>
+  <Header selected="home" dontshowback={true}/>
   </span>
   <SecondSection/>
   <Footer/>

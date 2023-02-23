@@ -4,7 +4,7 @@ html {
   --general-font: 'Montserrat', sans-serif;
   --bg-color: #0F110C;
   --bg-color-lighter: #1e2119;
-  --text-color-main: #a9a8a8;
+  --text-color-main: rgb(169, 168, 168);
   --text-color-second: #c5dfe5;
   scroll-behavior: smooth;
 
@@ -65,9 +65,11 @@ html {
 .sticky-header {
   position: sticky;
   overflow-x: auto;
+  display: inline-block;
   box-sizing: border-box;
   top: 0;
-  width: 100vh;
+  border-radius: 0 0 10px 10px;
+  width: 100%;
   right: 0;
   bottom: 0;
   left: 0;

@@ -22,6 +22,20 @@
     text-align: left;
     flex-wrap: wrap;
   }
+  .sticky-header {
+    position: sticky;
+    overflow-x: auto;
+    display: inline-block;
+    box-sizing: border-box;
+    top: 0;
+    background-color: rgba(169, 168, 168, 0.5); /* set the background color to transparent white */
+    backdrop-filter: blur(5px);
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
   .blog-holder > p {
     font-size: 1.2em;
   }

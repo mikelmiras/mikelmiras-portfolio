@@ -6,6 +6,7 @@ import { useState } from "react"
 export default function Header(props){
     let specialClasses = ["", ""]
     if (props.selected =="blog") specialClasses[1] = "selected-menu-item"
+    else if (props.selected == "home") specialClasses[0] = "selected-menu-item"
     const router = useRouter()
     const [goBack, setGoBack] = useState(<><span className="goback"></span></>)
     useEffect((e)=>{
