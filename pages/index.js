@@ -17,7 +17,7 @@ export default function Home() {
   const [display, notDisplay] = useState();
   return (
   <>
-  <GenericMeta/>
+  <GenericMeta title={"Mikel Miras"}/>
 
   <div className={"supremo " + display}>
     {<AiOutlineClose title="Cerrar" className="close" onClick={() => {
@@ -112,10 +112,10 @@ export function Reference(props){
     )
   }
 
-  function GenericMeta(){
+  export function GenericMeta({title}){
     return(
       <Head>
-        <title>Mikel Miras</title>
+        <title>{title}</title>
       </Head>
     )
   }

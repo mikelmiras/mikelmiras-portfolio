@@ -3,6 +3,7 @@ import Link from "next/link";
 import { months } from "../util";
 import { BsCalendarDate  } from "react-icons/bs";
 import {AiOutlineLock} from "react-icons/ai"
+import { GenericMeta } from ".";
 export default function Blog({data}){
     let noitem = <></>
     if (data.data.length == 0){
@@ -10,6 +11,7 @@ export default function Blog({data}){
     }
     return(
         <>
+        <GenericMeta title="Blog - Mikel Miras"/>
         <Header selected="blog"/> 
         <div className="blog-wrapper">
             <section className="blog-holder">
