@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import SecondSection from "../components/SecondSection";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import Head from "next/head";
+import Header from "../components/Header";
 
 
 
@@ -17,6 +18,7 @@ export default function Home() {
   return (
   <>
   <GenericMeta/>
+
   <div className={"supremo " + display}>
     {<AiOutlineClose title="Cerrar" className="close" onClick={() => {
       notDisplay("notvisible")
@@ -44,8 +46,13 @@ export default function Home() {
   {
     // Starts second section
   }
+    <div className="sticky-wrapper">
+  <span className="sticky-header">
+  <Header dontshowback={true}/>
+  </span>
   <SecondSection/>
   <Footer/>
+  </div>
   </>    
   );
   

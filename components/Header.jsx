@@ -9,7 +9,7 @@ export default function Header(props){
     const router = useRouter()
     const [goBack, setGoBack] = useState(<><span className="goback"></span></>)
     useEffect((e)=>{
-        if (window.history.length > 2){
+        if (window.history.length > 2 && props.dontshowback != true){
             setGoBack(<span className="goback">
             <span onClick={(e)=>{
                 router.back()

@@ -53,6 +53,25 @@ html {
   width: 100%;
   box-sizing: content-box;
 }
+.sticky-wrapper {
+  position: absolute;
+  box-sizing: border-box;
+  width: 99%;
+  margin: 0;
+  padding: 0;
+  height: fit-content;
+  top: 100vh;
+}
+.sticky-header {
+  position: sticky;
+  overflow-x: auto;
+  box-sizing: border-box;
+  top: 0;
+  width: 100vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 .blog-holder > ul > li {
   list-style-type: disc;
   box-sizing: content-box;
