@@ -50,6 +50,7 @@ html {
 .blog-holder > ul {
   list-style-type: disc !important;
   margin-left: 4em;
+  box-sizing: border-box;
 }
 .blog-holder > ul > li {
   list-style-type: disc;
