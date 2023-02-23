@@ -4,12 +4,17 @@ import { months } from "../util";
 import { BsCalendarDate  } from "react-icons/bs";
 import {AiOutlineLock} from "react-icons/ai"
 export default function Blog({data}){
+    let noitem = <></>
+    if (data.data.length == 0){
+        noitem = <h2>Aún no hay entradas de blog.</h2>
+    }
     return(
         <>
         <Header selected="blog"/> 
         <div className="blog-wrapper">
             <section className="blog-holder">
             <h1>Blog</h1>
+            {noitem}
             {data.data.map((item)=>{
                 const date = new Date(item.date)
                 let isprivate = <></>
