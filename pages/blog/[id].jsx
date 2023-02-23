@@ -47,7 +47,7 @@ export async function getServerSideProps(context){
         "body":JSON.stringify({"allowprivate":(context.req.cookies.auth)})
     })
     const response = await data.json()
-    if (data.status == 404){
+    if (!response.status){
         return{
             notFound:true,
         }

@@ -16,6 +16,7 @@ export default async function handler(req, res){
               data = await db.query("SELECT * FROM posts WHERE public = 1 AND slug = ?", [req.query.id])
             }
             await db.end()
+            console.log(data)
             if (data[0] == undefined){
               res.status(404).json({"status":false, "message":"404 Not found"})
             }else{
