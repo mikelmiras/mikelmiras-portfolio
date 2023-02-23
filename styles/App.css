@@ -47,13 +47,15 @@ html {
   width: 100%;
   justify-content: space-between;
 }
-.blog-holder > ul {
+.blog-holder >  ul {
   list-style-type: disc !important;
-  padding: 0 4em;
-  box-sizing: border-box;
+  margin: 0 4em;
+  width: 100%;
+  box-sizing: content-box;
 }
 .blog-holder > ul > li {
   list-style-type: disc;
+  box-sizing: content-box;
 }
 .blog-holder > blockquote {
   background-color: #1e2119;
@@ -136,7 +138,11 @@ header > .hr {
   width: 55%;
   
 }
-
+.blog-holder > p > img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
 .linked-h2 > * {
   color: white;
   display: flex;
