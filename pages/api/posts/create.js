@@ -13,7 +13,6 @@ export default async function handler(req, res){
         res.status(400).json({"status":false, "message":"Bad request"})
         return;
     }
-    if (privacy != 1 || privacy != 0) privacy = 1
     const db = mysql(
         {  
           config: {
