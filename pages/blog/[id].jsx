@@ -4,6 +4,7 @@ import {BsCalendarDate, BsClock} from "react-icons/bs"
 import Header from "../../components/Header";
 import { months } from "../../util";
 import {AiOutlineLock} from "react-icons/ai"
+import { Alltags } from "../blog";
 export default function Blog({response}){
     const date = new Date(response.data.date)
     let isprivate = <></>
@@ -16,6 +17,7 @@ export default function Blog({response}){
         <div itemScope itemType="https://schema.org/TechArticle" className="blog-wrapper">
         <section className="blog-holder">
         <h1 itemProp="name">{isprivate}{response.data.title}</h1>
+        <Alltags tagArray={response.tags}/>
         <span className="notvisible" itemProp="author" itemType="Person">Mikel Miras</span>
         <span className="article-data">
             <span itemProp="datePublished" datetime={date.toISOString()} className="date-holder"><BsCalendarDate/> <span className="date"> {date.getDate()  + " de " + months[date.getMonth()] + ", " + date.getFullYear()}</span></span>

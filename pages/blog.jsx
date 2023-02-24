@@ -26,11 +26,7 @@ export default function Blog({data}){
                 return(
                     <>
                     <h2 className="linked-h2"><Link href={"/blog/" + item.slug}>{isprivate}{item.title}</Link></h2>
-                    <div className="tags-wrapper">
-                    {item.tags.map(tag=>{
-                        return(<Tag key={tag.name} color={tag.color} name={tag.name} emoji={tag.emoji} longname={tag.longname}/>)
-                    })}
-                    </div>
+                    <Alltags tagArray={item.tags}/>
                     <span className="article-data">
                         <span className="date-holder"><BsCalendarDate/> 
                             <span className="date"> {date.getDate()  + " de " + months[date.getMonth()] + ", " + date.getFullYear()}</span>
@@ -64,7 +60,14 @@ export async function getServerSideProps(context){
     }
 }
 
+export function Alltags({tagArray}){
+return(<div className="tags-wrapper">
+{tagArray.map(tag=>{
+    return(<Tag key={tag.name} color={tag.color} name={tag.name} emoji={tag.emoji} longname={tag.longname}/>)
+})}
+</div>)
+}
 
 export function Tag({name, emoji, longname, color}){
-    return(<Link id={"tag-" + name} style={{background:color}} href={"/tags/" + name} title={longname} className={"tags tag-" + name}><span>{emoji}</span><span>{name}</span></Link>)
+    return(<Link id={"tag-" + name} style={{background:color}} href={"blog//tags/" + name} title={longname} className={"tags tag-" + name}><span>{emoji}</span><span>{name}</span></Link>)
 }
