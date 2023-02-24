@@ -28,7 +28,7 @@ export default function Blog({data}){
                     <h2 className="linked-h2"><Link href={"/blog/" + item.slug}>{isprivate}{item.title}</Link></h2>
                     <div className="tags-wrapper">
                     {item.tags.map(tag=>{
-                        return(<Tag color={tag.color} name={tag.name} emoji={tag.emoji} longname={tag.longname}/>)
+                        return(<Tag key={tag.name} color={tag.color} name={tag.name} emoji={tag.emoji} longname={tag.longname}/>)
                     })}
                     </div>
                     <span className="article-data">
