@@ -9,6 +9,18 @@ html {
   scroll-behavior: smooth;
 
 }
+.privacy-selector > span > * {
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.privacy-selector {
+  display: flex;
+  font-weight: 900;
+  align-content: flex-end;
+  gap: .4em;
+  flex-direction: row;
+  width: 100%;
+}
 .title-input {
   font-weight: 900;
 }

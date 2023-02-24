@@ -2,12 +2,14 @@ import { useEffect, useState } from "react"
 import { ReactMarkdown } from "react-markdown/lib/react-markdown"
 import Footer from "../../components/Footer"
 import Header from "../../components/Header"
+import {MdOutlinePublic, MdLockOutline} from "react-icons/md"
 
 export default function Post(){
     const [content, setContent] = useState("")
     const [title, setTitle] = useState("")
     const [slug, setSlug] = useState("")
     const [valid, setValid] = useState(true)
+    const [privacy, setPrivacy] = useState(1)
     const [err, setErr] = useState(<></>)
     useEffect((e)=>{
         if (localStorage.getItem("new_post_title")){
@@ -35,7 +37,7 @@ export default function Post(){
 
                     if (!valid) return;
                     setValid(false)
-                    const data = {title, slug, content}
+                    const data = {title, slug, content, privacy}
                     fetch("/api/posts/create",{
                         "method":"POST",
                         "headers":{
@@ -52,6 +54,16 @@ export default function Post(){
                         setValid(true)
                     })
                 }} className="post-form">
+                    <p className="privacy-selector">Privacy: <span onClick={(e)=>{
+                        switch(privacy){
+                            case 0:
+                                setPrivacy(1)
+                                break;
+                            case 1:
+                                setPrivacy(0)
+                                break;
+                        }
+                    }}>{<Privacy privacy={privacy} setPrivacy={setPrivacy}/>}</span></p>
                     <input defaultValue={title} onChange={(e)=>{
                         setTitle(e.target.value)
                         localStorage.setItem("new_post_title", e.target.value)
@@ -88,5 +100,19 @@ export async function getServerSideProps(context){
 
     return{
         props:{}
+    }
+}
+
+
+function Privacy({privacy, setPrivacy}){
+    switch(privacy){
+        case 1:
+            return(<MdOutlinePublic/>)
+            break;
+        case 0:
+            return(<MdLockOutline/>)
+            break;
+        default:
+            setPrivacy(1)
     }
 }

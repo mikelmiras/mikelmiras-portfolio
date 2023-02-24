@@ -4,6 +4,7 @@ export default async function handler(req, res){
     const slug = req.body.slug
     const content = req.body.content
     const cookie = req.cookies
+    let privacy = req.body.privacy
     if (cookie.auth != process.env.POST_PASS){
         res.status(401).json({"status":false, "message":"Unauthorized"})
         return;
@@ -12,6 +13,7 @@ export default async function handler(req, res){
         res.status(400).json({"status":false, "message":"Bad request"})
         return;
     }
+    if (privacy != 1 || privacy != 0) privacy = 1
     const db = mysql(
         {  
           config: {
@@ -21,7 +23,7 @@ export default async function handler(req, res){
             database:process.env.DBNAME
           }
             });
-            try {const query = await db.query('INSERT INTO posts(title, content, slug) VALUES(?,?,?)', [title, content, slug])
+            try {const query = await db.query('INSERT INTO posts(title, content, slug, public) VALUES(?,?,?,?)', [title, content, slug, privacy])
             res.status(200).json({"status":true, "data":query})
         } catch(e){
             res.status(409).json({"status":false, "message":"409 Conflict. Specified item already exists"})
