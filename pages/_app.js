@@ -1,3 +1,4 @@
+import "../styles/tagcolors.css"
 import "../styles/App.css"
 import "../styles/Mobile.css"
 import "../styles/Pc.css"

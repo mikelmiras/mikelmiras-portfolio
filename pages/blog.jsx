@@ -4,6 +4,7 @@ import { months } from "../util";
 import { BsCalendarDate  } from "react-icons/bs";
 import {AiOutlineLock} from "react-icons/ai"
 import { GenericMeta } from ".";
+import { useEffect } from "react";
 export default function Blog({data}){
     let noitem = <></>
     if (data.data.length == 0){
@@ -24,6 +25,11 @@ export default function Blog({data}){
                 return(
                     <>
                     <h2 className="linked-h2"><Link href={"/blog/" + item.slug}>{isprivate}{item.title}</Link></h2>
+                    <div className="tags-wrapper">
+                    {item.tags.map(tag=>{
+                        return(<Tag color={tag.color} name={tag.name} emoji={tag.emoji} longname={tag.longname}/>)
+                    })}
+                    </div>
                     <span className="article-data">
                         <span className="date-holder"><BsCalendarDate/> 
                             <span className="date"> {date.getDate()  + " de " + months[date.getMonth()] + ", " + date.getFullYear()}</span>
@@ -55,4 +61,9 @@ export async function getServerSideProps(context){
             data
         }
     }
+}
+
+
+export function Tag({name, emoji, longname, color}){
+    return(<Link id={"tag-" + name} style={{background:color}} href={"/tags/" + name} title={longname} className={"tags tag-" + name}><span>{emoji}</span><span>{name}</span></Link>)
 }

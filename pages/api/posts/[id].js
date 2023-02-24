@@ -6,7 +6,8 @@ export default async function handler(req, res){
             host: process.env.DBHOST,
             user: process.env.DBUSERNAME,
             password: process.env.DBPASS,
-            database:process.env.DBNAME
+            database:process.env.DBNAME,
+            charset:"utf8mb4",
           }
             });
             let data
@@ -15,11 +16,15 @@ export default async function handler(req, res){
             }else{
               data = await db.query("SELECT * FROM posts WHERE public = 1 AND slug = ?", [req.query.id])
             }
-            await db.end()
             if (data[0] == undefined){
               res.status(404).json({"status":false, "message":"404 Not found"})
             }else{
-              res.status(200).json({"status":true, "data":data[0]})
+              const tags = await db.query(`SELECT name, emoji, longname, color FROM colorenum
+              JOIN posts_category ON posts_category.categoryid = colorenum.id
+              JOIN posts ON posts.id = posts_category.postid
+              WHERE posts.id = ?;`, [data[0].id])
+              await db.end()
+              res.status(200).json({"status":true, "data":data[0], "tags":tags})
             }
             
 }

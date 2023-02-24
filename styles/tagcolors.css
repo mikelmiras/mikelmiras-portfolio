@@ -1,0 +1,39 @@
+.tags {
+    width: fit-content !important;
+    align-self: flex-start;
+    padding: .1em .6em .1em 1.4em;
+    gap: .1em;
+    display: inline;
+    width: fit-content;
+    display: flex;
+    color: white;
+    border-radius: 10px;
+    margin: 0 0 1.1em 0;
+    flex-grow: 1;
+    flex-grow: 0;
+    text-decoration: none;
+}
+
+.tags-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1.2em;
+}
+
+.tags::before {
+    position: relative;
+    will-change: top;
+    content:"";
+    background-color: black;
+    height: .5em;
+    border-radius: 50%;
+    top: 30%;
+    bottom: -30%;
+    padding: 0;
+    margin: 0;
+    transform: translateY(100%);
+    box-sizing: border-box;
+    right: 15%;
+    width: .5em;
+}
