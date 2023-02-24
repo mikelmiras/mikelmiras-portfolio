@@ -44,6 +44,7 @@ export default function Blog({data}){
     )
 }
 
+
 export async function getServerSideProps(context){
     const resp = await fetch(process.env.FETCH_URL, {
         "method":"POST",
