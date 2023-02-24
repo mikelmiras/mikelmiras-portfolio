@@ -5,6 +5,7 @@ import Header from "../../components/Header";
 import { months } from "../../util";
 import {AiOutlineLock} from "react-icons/ai"
 import { Alltags } from "../blog";
+import { GenericMeta } from "..";
 export default function Blog({response}){
     const date = new Date(response.data.date)
     let isprivate = <></>
@@ -14,10 +15,11 @@ export default function Blog({response}){
     return(
         <>
         <Header selected={"blog"}/>
+        <GenericMeta title={response.data.title + " - Mikel Miras"}/>
         <div itemScope itemType="https://schema.org/TechArticle" className="blog-wrapper">
         <section className="blog-holder">
         <h1 itemProp="name">{isprivate}{response.data.title}</h1>
-        <Alltags tagArray={response.tags}/>
+        <Alltags url={"/blog/tags/"} tagArray={response.tags}/>
         <span className="notvisible" itemProp="author" itemType="Person">Mikel Miras</span>
         <span className="article-data">
             <span itemProp="datePublished" datetime={date.toISOString()} className="date-holder"><BsCalendarDate/> <span className="date"> {date.getDate()  + " de " + months[date.getMonth()] + ", " + date.getFullYear()}</span></span>

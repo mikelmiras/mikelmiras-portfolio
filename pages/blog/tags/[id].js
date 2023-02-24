@@ -15,7 +15,7 @@ export default function ByTag({response}){
         <div className="blog-wrapper">
             <section className="blog-holder">
             <h1>Blog (etiqueta: {response.tags[0].name})</h1>
-            <Alltags tagArray={response.tags}/>
+            <Alltags url={"../"} tagArray={response.tags}/>
             {response.data.map((item)=>{
                 const date = new Date(item.date)
                 let isprivate = <></>
