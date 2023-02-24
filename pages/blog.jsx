@@ -5,6 +5,7 @@ import { BsCalendarDate  } from "react-icons/bs";
 import {AiOutlineLock} from "react-icons/ai"
 import { GenericMeta } from ".";
 import { useEffect } from "react";
+import Footer from "../components/Footer";
 export default function Blog({data}){
     let noitem = <></>
     if (data.data.length == 0){
@@ -41,8 +42,8 @@ export default function Blog({data}){
             })}
             
             </section>
-
         </div>
+        <Footer/>
         </>
     )
 }
