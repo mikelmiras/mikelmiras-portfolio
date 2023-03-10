@@ -1,7 +1,7 @@
 import { URLSearchParams } from "next/dist/compiled/@edge-runtime/primitives/url";
 import { useEffect } from "react";
 import { useState } from "react";
-export default function SpotiCallback({spoti_secret, url, gpt_secret}){
+export default function SpotiCallback({redirecturl}){
     const [called, setCalled] = useState(false)
     useEffect(()=>{
         if (called) return;
@@ -12,7 +12,7 @@ export default function SpotiCallback({spoti_secret, url, gpt_secret}){
             return;
         }
         document.getElementById('content').innerHTML = '<p style="color: white;">Cargando...</p>'
-        fetch("http://127.0.0.1:3000/api/spotify", {
+        fetch(redirecturl, {
             "method":"POST",
             "headers":{
                 "Content-type":"application/x-www-form-urlencoded"
@@ -34,4 +34,12 @@ export default function SpotiCallback({spoti_secret, url, gpt_secret}){
     return(
         <div id="content"></div>
     )
+}
+
+export function getServerSideProps(){
+    return{
+        props:{
+            redirecturl:process.env.API_URL
+        }
+    }
 }
