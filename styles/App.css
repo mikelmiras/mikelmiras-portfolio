@@ -95,7 +95,8 @@ html {
   color: white;
   padding: 1em 2em;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 0px 10px 10px 0;
+  border-left: 3px solid #ef8354;
 }
 .blog-holder > p > a {
   color: #EF8354 !important;
