@@ -39,7 +39,7 @@ export default function Blog({data, admin}){
                             <span className="date"> {date.getDate()  + " de " + months[date.getMonth()] + ", " + date.getFullYear()}</span>
                             </span>
                         </span>
-                    <p>{item.content.substring(0, 196).replaceAll("\\n", "").replaceAll("#", "").replaceAll("*", "") + "..."}</p>
+                    <p>{removeMarkdownSyntax(item.content.substring(0, 196)).replaceAll("\\n", ".").replaceAll("..", ". ") + "..."}</p>
                     </>
                 )
             })}
@@ -85,3 +85,35 @@ export function Tag({name, emoji, longname, color, url}){
     else newurl = url + name
     return(<Link id={"tag-" + name} style={{background:color}} href={newurl} title={longname} className={"tags tag-" + name}><span>{emoji}</span><span>{name}</span></Link>)
 }
+
+function removeMarkdownSyntax(str) {
+    // Remove bold text
+    str = str.replace(/\*\*(.*?)\*\*/g, "$1");
+  
+    // Remove italicized text
+    str = str.replace(/\*(.*?)\*/g, "$1");
+  
+    // Remove headers
+    str = str.replace(/#+\s*(.*?)\s*\#*/g, "$1");
+  
+    // Remove links
+    str = str.replace(/\[(.*?)\]\((.*?)\)/g, "$1 ($2)");
+  
+    // Remove inline code
+    str = str.replace(/`([^`]+)`/g, "$1");
+  
+    // Remove blockquotes
+    str = str.replace(/\n?>\s*(.*)/g, "$1");
+  
+    // Remove unordered lists
+    str = str.replace(/\n\s*\*\s*(.*)/g, "$1");
+  
+    // Remove ordered lists
+    str = str.replace(/\n\s*\d+\.\s*(.*)/g, "$1");
+  
+    // Remove horizontal lines
+    str = str.replace(/---|\*\*\*/g, "");
+  
+    return str.trim();
+  }
+  
