@@ -9,6 +9,28 @@ html {
   scroll-behavior: smooth;
 
 }
+
+.editing-msg {
+  font-size: 1em !important;
+}
+.stop-edit-btn {
+  background-color: #6d2727 !important;
+  color: #ff0000 !important;
+}
+.edit-btn {
+  background-color: #37a07f;
+  color: #00ffae;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  gap: .5em;
+  box-sizing: border-box;
+  padding: .25em 3.3em;
+  margin-bottom: .5em;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+}
 .privacy-selector > span > * {
   font-size: 1.2em;
   cursor: pointer;
