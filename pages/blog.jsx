@@ -6,11 +6,17 @@ import {AiOutlineLock} from "react-icons/ai"
 import { GenericMeta } from ".";
 import { useEffect } from "react";
 import Footer from "../components/Footer";
-export default function Blog({data}){
+import Router from "next/router";
+import {MdOutlinePostAdd} from "react-icons/md"
+export default function Blog({data, admin}){
     let noitem = <></>
     if (data.data.length == 0){
         noitem = <h2>Aún no hay entradas de blog.</h2>
     }
+    let admindata = <></>
+    if (admin) admindata = <span className="edit-btn" onClick={(e)=> {
+        Router.push("/blog/post")
+    }}> <MdOutlinePostAdd/> Crear nuevo post</span>
     return(
         <>
         <GenericMeta title="Blog - Mikel Miras"/>
@@ -19,6 +25,7 @@ export default function Blog({data}){
             <section className="blog-holder">
             <h1>Blog</h1>
             {noitem}
+            {admindata}
             {data.data.map((item)=>{
                 const date = new Date(item.date)
                 let isprivate = <></>
@@ -54,9 +61,12 @@ export async function getServerSideProps(context){
         "body":JSON.stringify({"allowprivate": context.req.cookies.auth})
     })
     const data = await resp.json();
+    let admin = false
+    if (context.req.cookies.auth === process.env.POST_PASS) admin = true
     return{
         props:{
-            data
+            data,
+            admin
         }
     }
 }
