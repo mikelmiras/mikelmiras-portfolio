@@ -114,7 +114,7 @@ export default function SecondSection(){
     <li className="index-li">
       <div className="text-holder">
    <ul className="experience-ul">
-      <li><VscDebugBreakpointData/> Backend Developer @ <a href="https://wozalabs.com" target={"_blank"}>Woza</a> (Apr. 2023-)</li>
+      <li><VscDebugBreakpointData/> Backend Developer @ <a href="https://wozalabs.com" rel="noreferrer" target={"_blank"}>Woza</a> (Apr. 2023-)</li>
     </ul>
    </div>
    </li>
