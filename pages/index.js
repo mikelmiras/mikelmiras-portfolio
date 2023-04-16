@@ -1,7 +1,7 @@
 import MainButton from "../components/MainButton";
 import {BsCodeSlash} from "react-icons/bs"
 import {AiOutlineHome, AiOutlineTwitter, AiOutlineClose, AiOutlineInstagram, AiFillGithub, AiOutlineMail} from "react-icons/ai"
-import {VscDebugBreakpointDataUnverified, VscDebugBreakpointFunction} from "react-icons/vsc"
+import {VscDebugBreakpointDataUnverified, VscDebugBreakpointFunction, VscDebugBreakpointData} from "react-icons/vsc"
 import { useState } from "react";
 import {FaTiktok} from "react-icons/fa"
 import {SiLeetcode} from "react-icons/si"

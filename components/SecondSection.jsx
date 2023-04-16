@@ -1,7 +1,7 @@
 import MainButton from "../components/MainButton";
 import {BsCodeSlash} from "react-icons/bs"
 import {AiOutlineHome, AiOutlineTwitter, AiOutlineClose, AiOutlineInstagram, AiFillGithub, AiOutlineMail} from "react-icons/ai"
-import {VscDebugBreakpointDataUnverified, VscDebugBreakpointFunction} from "react-icons/vsc"
+import {VscDebugBreakpointDataUnverified, VscDebugBreakpointData, VscDebugBreakpointFunction} from "react-icons/vsc"
 import { useState } from "react";
 import {FaTiktok} from "react-icons/fa"
 import { Reference } from "../pages";
@@ -113,11 +113,9 @@ export default function SecondSection(){
    <ul className="project-list">
     <li className="index-li">
       <div className="text-holder">
-   <p className="mobile-text">
-    Experiencia demostrable en el ámbito del desarrollo web. Conocimientos en <b>PHP</b>, <b>HTML</b>, <b>CSS</b>, <b>JavaScript</b> y frameworks JS como <b>React</b> o <b>NextJS</b>; así como experiencia en el manejo de bases de datos relacionales como <b>MySQL</b> y en el desarrollo de API Rests.
-    <br/>
-    También tengo experiencia en <b>Python</b> desarrollando bots para Discord y en otras plataformas como .NET de Microsoft. 
-   </p>
+   <ul className="experience-ul">
+      <li><VscDebugBreakpointData/> Backend Developer @ <a href="https://wozalabs.com" target={"_blank"}>Woza</a> (Apr. 2023-)</li>
+    </ul>
    </div>
    </li>
    </ul>
