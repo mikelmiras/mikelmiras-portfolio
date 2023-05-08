@@ -126,7 +126,7 @@ export default function SecondSection(){
       <div className="text-holder">
       <div className="rrss-box-holder">
           <Box icon={<AiOutlineTwitter/>} text="Twitter" goto="https://twitter.com/mikelmiras_"/>
-          <Box icon={<AiOutlineInstagram/>} text="Instagram" goto="https://instagram.com/mikemiras_"/>
+          <Box icon={<AiOutlineInstagram/>} text="Instagram" goto="https://instagram.com/mikelmiras_"/>
           <Box icon={<AiFillGithub/>} text="Github" goto="https://github.com/mikelmiras"/>
           <Box icon={<AiOutlineMail/>} text="Email" goto="mailto:m@mikelmiras.com"/>
           </div>

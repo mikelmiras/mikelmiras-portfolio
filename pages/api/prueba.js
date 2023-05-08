@@ -1,3 +1,3 @@
 export default async function handler(req, res){
-    res.status(200).json({"data":process.env.DBHOST})
+    res.status(200).json(req.body)
 }
