@@ -1,6 +1,6 @@
 import MainButton from "../components/MainButton";
 import {BsCodeSlash} from "react-icons/bs"
-import {AiOutlineHome, AiOutlineTwitter, AiOutlineClose, AiOutlineInstagram, AiFillGithub, AiOutlineMail} from "react-icons/ai"
+import {AiOutlineHome, AiOutlineTwitter, AiOutlineClose, AiOutlineInstagram, AiFillGithub, AiOutlineMail, AiFillLinkedin} from "react-icons/ai"
 import {VscDebugBreakpointDataUnverified, VscDebugBreakpointFunction, VscDebugBreakpointData} from "react-icons/vsc"
 import { useState } from "react";
 import {FaTiktok} from "react-icons/fa"
@@ -36,7 +36,7 @@ export default function Home() {
         <a target="_blank" rel="noreferrer" href="https://twitter.com/mikelmiras_" className="rrss-a"><AiOutlineTwitter/> </a>
         <a target="_blank" rel="noreferrer" href="https://instagram.com/mikelmiras_" className="rrss-a"><AiOutlineInstagram/></a>
         <a target="_blank" rel="noreferrer" href="https://github.com/mikelmiras" className="rrss-a"><AiFillGithub/></a>
-        <a target="_blank" rel="noreferrer" href="https://leetcode.com/mikelmiras/" className="rrss-a"><SiLeetcode/></a> 
+        <a target="_blank" rel="noreferrer" href="https://linkedin.com/in/mikelmiras/" className="rrss-a"><AiFillLinkedin/></a> 
         <a title="m@mikelmiras.com" target="_blank" rel="noreferrer" href="mailto:m@mikelmiras.com" className="rrss-a"><AiOutlineMail/></a>
       </>
     }
